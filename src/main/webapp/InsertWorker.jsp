@@ -7,63 +7,72 @@
     <meta charset="utf-8">
     <title>Dodaj Pracownika:</title>
 
-<style>
-    div.formularz {
+    <style>
+        div.border {
+            font-size: 20px;
+            font-weight: bold;
+            color: gray;
+            background-color: lightgoldenrodyellow;
+            margin: 0px;
+            border     : 2px solid lightgray;
+            padding    : 6px;
+            width: 400px;
+            border-radius: 4px;
+            float : left;
+        }
 
-        font-size: 20px;
-        background-color: darkcyan;
-        margin     : auto;
-        border     : 1px solid darkblue;
-        padding    : 0px;
-        width      : 300px;
+        div.formularz {
 
-    }
-
-    div.button {
-        font-size: 20px;
-        background-color: lightcyan;
-        margin     : auto;
-        border     : 1px solid darkblue;
-        padding    : 0px;
-        width      : 300px;
-    }
+            font-size: 20px;
+            font-weight: bold;
+            color: gray;
+            background-color: lightgoldenrodyellow;
+            margin: 0px;
+            border     : 2px solid lightgray;
+            padding    : 6px;
+            width: 200px;
+            border-radius: 4px;
+            float : left;
+        }
+        input[type=submit] {
+            width: 77%;
+            color: gray;
+            background-color: lightyellow;
+            padding: 14px 20px;
+            letter-spacing: 1px;
+            margin: 8px 0;
+            border     : 2px solid lightgray;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
 </head>
-
 <body>
-
-<div style="font-size: 24px; background-color: blue">
-<%-- "/" prowadzi do servletu --%>
-
-    <%--<c:forEach var = "${workers}" begin="0">--%>
-        <%--Item <c:out value = "${workers}"/><p>--%>
-    <%--</c:forEach>--%>
-    Wyswietlamy 1 pracownika: <br />
-    <c:forEach var="i" begin="0" end="${workers.size()-1}">
-        <c:out value="${workers.get(i).lastName}"/><br/>
-    </c:forEach>
-
+<div>
     <form action="/" method="post">
+        <div class="formularz">Imie: </div>
+        <div class="formularz"> <input name="firstName"></div>
 
+        <div class="formularz">Nazwisko:</div>
+        <div class="formularz">  <input name="lastName"></div>
 
-        <div class="formularz">Imie:<input name="firstName"></div>
+        <div class="formularz">Wiek:</div>
+        <div class="formularz">  <input name="age"></div>
 
-        <div>Nazwisko:<input name="lastName"></div>
-
-        <div>Wiek:<input name="age"></div>
-
-        <div>Wyplata:<input name="salary"></div>
-
-        <input class="button", type="submit">
-
+        <div class="formularz">Wyplata:</div>
+        <div class="formularz"> <input name="salary"></div>
     </form>
 
-    Imię pracownika: <c:out value="${worker.firstName}"/><br />
-    Nazwisko pracownika: <c:out value="${worker.lastName}"/><br />
-
-
-
-
+</div>
+<br style="clear:both">
+<br />
+<div>
+    <div class=formularz>Imię pracownika: <c:out value="${worker.firstName}"/></div><br style="clear:both">
+    <div class=formularz>Nazwisko pracownika: <c:out value="${worker.lastName}"/></div><br style="clear:both">
+</div>
+<br style="clear:both">
+<div style="alignment: left">
+    <input class="input" type="submit" style="font-size: 40px">
 </div>
 </body>
 </html>
