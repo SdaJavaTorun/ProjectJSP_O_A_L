@@ -5,25 +5,47 @@
 <head>
     <meta charset="utf-8">
     <title>Dodaj Pracownika:</title>
+
+<style>
+    div.formularz {
+
+        font-size: 20px;
+        background-color: darkcyan;
+        margin     : auto;
+        border     : 1px solid darkblue;
+        padding    : 0px;
+        width      : 300px;
+
+    }
+
+    div.button {
+        font-size: 20px;
+        background-color: lightcyan;
+        margin     : auto;
+        border     : 1px solid darkblue;
+        padding    : 0px;
+        width      : 300px;
+    }
+    </style>
 </head>
 
 <body>
 
-<div>
+<div style="font-size: 24px; background-color: blue">
 <%-- "/" prowadzi do servletu --%>
     <form action="/" method="post">
 
 
-        <div>Imie:<input name="firstName"></div>
+        <div class="formularz">Imie:<input name="firstName"></div>
 
         <div>Nazwisko:<input name="lastName"></div>
-
 
         <div>Wiek:<input name="age"></div>
 
         <div>Wyplata:<input name="salary"></div>
 
-        <input type="submit">
+        <input class="button", type="submit">
+
     </form>
 
     Imię pracownika: <c:out value="${worker.firstName}"/><br />
