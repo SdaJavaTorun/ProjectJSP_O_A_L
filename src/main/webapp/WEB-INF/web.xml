@@ -5,13 +5,18 @@
          version="3.1">
 
     <servlet>
-        <servlet-name>HelloWorld</servlet-name>
-        <jsp-file>/HelloWorld.jsp</jsp-file>
+        <servlet-name>InsertWorker</servlet-name>
+        <jsp-file>/InsertWorker.jsp</jsp-file>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>HelloWorld</servlet-name>
-        <url-pattern>/</url-pattern>
+        <servlet-name>InsertWorker</servlet-name>
+        <url-pattern>/InsertWorker</url-pattern>
     </servlet-mapping>
+
+    <welcome-file-list>
+        <!--<welcome-file>nacisnijpole</welcome-file>-->
+        <welcome-file>InsertWorker</welcome-file>
+    </welcome-file-list>
 
 </web-app>
