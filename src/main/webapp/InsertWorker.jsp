@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="model.Worker" %>
+<%@ page import="controller.WorkerDAO" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -33,6 +34,13 @@
 
 <div style="font-size: 24px; background-color: blue">
 <%-- "/" prowadzi do servletu --%>
+
+    <%--<c:forEach var = "${workers}" begin="0">--%>
+        <%--Item <c:out value = "${workers}"/><p>--%>
+    <%--</c:forEach>--%>
+    Wyswietlamy 1 pracownika: <br />
+    <c:out value="${workers.get(0).lastName}"/>
+
     <form action="/" method="post">
 
 
