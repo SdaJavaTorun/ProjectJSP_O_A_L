@@ -1,27 +1,33 @@
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="model.Worker" %>
 <html>
 <head>
 
- <title>Dodaj Pracownika:</title>
+    <title>Dodaj Pracownika:</title>
+</head>
 
 <body>
 
-    <div>
+<div>
 
-        <form action="hello">
+    <form action="/" method="post">
 
-  <div>Imie:</div>
 
-  <div>Nazwisko:</div>
+        <div>Imie:<input name="firstName"></div>
 
-  <div>Wiek:</div>
+        <div>Nazwisko:<input name1="lastName"></div>
 
-  <div>Wyplata:</div>
 
-  <div>ID:</div>
+        <div>Wiek:<input name2="age"></div>
 
-  </form>
+        <div>Wyplata:<input name3="salary"></div>
 
-  </head>
-  <body>
-  </html>
+        <input type="submit">
+    </form>
+
+    Pracownik: <c:out value="${worker.firstName}"/>
+
+
+</div>
+</body>
+</html>

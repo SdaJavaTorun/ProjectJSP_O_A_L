@@ -1,34 +1,38 @@
 package model;
 
 public class Worker {
-    private String Imie;
-    private String Nazwisko;
+    private String lastName;
+    private String firstName;
     private int age;
     private double salary;
     private int Id;
 
-    public Worker(String imie, String nazwisko, int age, int salary, int id) {
-        Imie = imie;
-        Nazwisko = nazwisko;
+    public Worker(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Worker(String lastName, String firstName, int age, double salary, int id) {
+        this.lastName = lastName;
+        this.firstName = firstName;
         this.age = age;
         this.salary = salary;
         Id = id;
     }
 
-    public String getImie() {
-        return Imie;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setImie(String imie) {
-        Imie = imie;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getNazwisko() {
-        return Nazwisko;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setNazwisko(String nazwisko) {
-        Nazwisko = nazwisko;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public int getAge() {

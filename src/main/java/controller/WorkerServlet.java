@@ -1,5 +1,7 @@
 package controller;
 
+import model.Worker;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,4 +21,12 @@ public class WorkerServlet extends HttpServlet {
         req.setAttribute("board", session );
         req.getRequestDispatcher("/InsertWorker.jsp").forward(req, resp);
 }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
+            IOException {
+
+        req.setAttribute("worker", new Worker(req.getParameter("firstName")));
+        req.getRequestDispatcher("/InsertWorker.jsp").forward(req, resp);
+    }
 }

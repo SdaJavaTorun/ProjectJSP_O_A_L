@@ -10,8 +10,18 @@
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>InsertWorker</servlet-name>
-        <url-pattern>/InsertWorker</url-pattern>
+    <servlet-name>InsertWorker</servlet-name>
+    <url-pattern>/InsertWorker.jsp</url-pattern>
+</servlet-mapping>
+
+    <servlet>
+        <servlet-name>WorkerServlet</servlet-name>
+        <servlet-class>controller.WorkerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WorkerServlet</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <welcome-file-list>
