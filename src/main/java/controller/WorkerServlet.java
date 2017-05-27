@@ -19,6 +19,7 @@ public class WorkerServlet extends HttpServlet {
 
         WorkerDAO workerDAO = new WorkerDAO();
 
+        workerDAO.removeAll();
         workerDAO.insertWorker(new Worker("Jas", "dertop"));
         workerDAO.insertWorker(new Worker("Jas2", "dertop2"));
         workerDAO.insertWorker(new Worker("Jas3", "dertop3"));

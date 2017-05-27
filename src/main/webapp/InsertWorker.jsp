@@ -39,7 +39,9 @@
         <%--Item <c:out value = "${workers}"/><p>--%>
     <%--</c:forEach>--%>
     Wyswietlamy 1 pracownika: <br />
-    <c:out value="${workers.get(0).lastName}"/>
+    <c:forEach var="i" begin="0" end="${workers.size()-1}">
+        <c:out value="${workers.get(i).lastName}"/><br/>
+    </c:forEach>
 
     <form action="/" method="post">
 

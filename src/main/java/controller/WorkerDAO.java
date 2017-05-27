@@ -24,4 +24,8 @@ public class WorkerDAO {
     public List<Worker> getWorkers () {
         return data;
     }
+
+    public void removeAll () {
+        data = new ArrayList<>();
+    }
 }
