@@ -2,11 +2,12 @@ package controller;
 
 import model.Worker;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WorkerDAO {
 
-    private static List<Worker> data;
+    private static List<Worker> data = new ArrayList<>();
 
     public void insertWorker (Worker worker) {
         data.add(worker);

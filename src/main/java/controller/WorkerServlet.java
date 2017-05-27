@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 public class WorkerServlet extends HttpServlet {
 
@@ -18,8 +17,15 @@ public class WorkerServlet extends HttpServlet {
         resp.setContentType("text/html");
         HttpSession session = req.getSession(true);
 
+        WorkerDAO workerDAO = new WorkerDAO();
 
-        req.setAttribute("board", session );
+        workerDAO.insertWorker(new Worker("Jas", "dertop"));
+        workerDAO.insertWorker(new Worker("Jas2", "dertop2"));
+        workerDAO.insertWorker(new Worker("Jas3", "dertop3"));
+
+        req.setAttribute("workers", workerDAO.getWorkers());
+
+        //req.setAttribute("board", session );
         req.getRequestDispatcher("/InsertWorker.jsp").forward(req, resp);
 }
 
@@ -27,11 +33,7 @@ public class WorkerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
             IOException {
 
-        WorkerDAO workerDAO = new WorkerDAO();
 
-
-
-        req.setAttribute("workers", workerDAO.getWorkers());
 
         req.setAttribute("worker",
                 new Worker(req.getParameter("firstName"),
