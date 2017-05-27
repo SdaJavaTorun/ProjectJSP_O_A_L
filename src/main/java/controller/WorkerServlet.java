@@ -26,7 +26,9 @@ public class WorkerServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
             IOException {
 
-        req.setAttribute("worker", new Worker(req.getParameter("firstName")));
+        req.setAttribute("worker",
+                new Worker(req.getParameter("firstName"),
+                           req.getParameter("lastName")));
         req.getRequestDispatcher("/InsertWorker.jsp").forward(req, resp);
     }
 }
