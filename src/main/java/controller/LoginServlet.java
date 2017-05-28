@@ -18,27 +18,27 @@ public class LoginServlet extends HttpServlet {
             IOException {
         resp.setContentType("text/html");
         HttpSession session = req.getSession(true);
-
-        //req.setAttribute("board", session );
-        req.getRequestDispatcher("/login.jsp").forward(req, resp);
+        req.getRequestDispatcher("/login.html").forward(req, resp);
     }
 
     public void doPost (HttpServletRequest req, HttpServletResponse resp)
             throws IOException, ServletException {
-        HttpSession session = req.getSession(true);
+        //HttpSession session = req.getSession(true);
 
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
 
         String userName = req.getParameter("username");
-        String password = req.getParameter("userpass");
+        String password = req.getParameter("password");
+
+        System.out.println("user" + userName + "pass" + password);
 
         if(LoginDAO.validate(userName, password )){
             resp.sendRedirect("/InsertWorker.jsp");
         }
         else{
             out.print("Sorry albo user albo hasło do bani");
-            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/login.jsp");
+            RequestDispatcher requestDispatcher = req.getRequestDispatcher("/login.html");
             requestDispatcher.include(req,resp);
         }
         out.close();
