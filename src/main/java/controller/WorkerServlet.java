@@ -27,7 +27,7 @@ public class WorkerServlet extends HttpServlet {
         req.setAttribute("workers", workersDAO.getWorkers());
 
         //req.setAttribute("board", session );
-        req.getRequestDispatcher("/insertworker.jsp").forward(req, resp);
+        req.getRequestDispatcher("/insert.jsp").forward(req, resp);
     }
 
     @Override
@@ -37,6 +37,6 @@ public class WorkerServlet extends HttpServlet {
         req.setAttribute("worker",
                 new Worker(req.getParameter("firstName"),
                            req.getParameter("lastName")));
-        req.getRequestDispatcher("/insertworker.jsp").forward(req, resp);
+        req.getRequestDispatcher("/insert.jsp").forward(req, resp);
     }
 }

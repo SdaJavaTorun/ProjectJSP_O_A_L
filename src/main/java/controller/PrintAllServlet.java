@@ -20,7 +20,7 @@ public class PrintAllServlet extends HttpServlet{
         WorkersDAO workersDAO = new WorkersDAO();
         System.out.printf("worker: " + workersDAO.getWorkers());
         req.setAttribute("workers", workersDAO.getWorkers());
-        req.getRequestDispatcher("/printallworkers.jsp").forward(req, resp);
+        req.getRequestDispatcher("/printall.jsp").forward(req, resp);
        // System.out.printf("worker: " + workersDAO.getWorkers());
     }
 

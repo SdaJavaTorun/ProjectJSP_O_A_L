@@ -19,7 +19,7 @@ public class InsertServlet extends HttpServlet{
         resp.setContentType("text/html");
 
         req.setAttribute("insertWorker", worker);
-        req.getRequestDispatcher("/insertworker.jsp").forward(req, resp);
+        req.getRequestDispatcher("/insert.jsp").forward(req, resp);
     }
 
     @Override

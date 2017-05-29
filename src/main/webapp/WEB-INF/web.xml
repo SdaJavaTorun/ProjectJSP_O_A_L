@@ -85,6 +85,25 @@
     <!---->
     <!---->
     <servlet>
+        <servlet-name>EditWorker</servlet-name>
+        <servlet-class>controller.EditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditWorker</servlet-name>
+        <url-pattern>/edit</url-pattern>
+    </servlet-mapping>
+    <!---->
+    <servlet>
+        <servlet-name>EditTemplate</servlet-name>
+        <jsp-file>/editworker.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditTemplate</servlet-name>
+        <url-pattern>/editworker.jsp</url-pattern>
+    </servlet-mapping>
+    <!---->
+    <!---->
+    <servlet>
         <servlet-name>DeleteWorker</servlet-name>
         <servlet-class>controller.DeleteServlet</servlet-class>
     </servlet>
