@@ -16,7 +16,7 @@
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
     </servlet-mapping>
-    
+    <!---->
     <servlet>
         <servlet-name>LoginTemplate</servlet-name>
         <jsp-file>/login.jsp</jsp-file>
@@ -25,7 +25,46 @@
         <servlet-name>LoginTemplate</servlet-name>
         <url-pattern>/login.jsp</url-pattern>
     </servlet-mapping>
-
+    <!---->
+    <!---->
+    <servlet>
+        <servlet-name>PrintAllServlet</servlet-name>
+        <servlet-class>controller.PrintAllServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PrintAllServlet</servlet-name>
+        <url-pattern>/printallworkers</url-pattern>
+    </servlet-mapping>
+    <!---->
+    <servlet>
+        <servlet-name>PrintAllTemplate</servlet-name>
+        <jsp-file>/printallworkers.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PrintAllTemplate</servlet-name>
+        <url-pattern>/printallworkers.jsp</url-pattern>
+    </servlet-mapping>
+    <!---->
+    <!---->
+    <servlet>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <servlet-class>controller.WelcomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WelcomeServlet</servlet-name>
+        <url-pattern>/welcome</url-pattern>
+    </servlet-mapping>
+    <!---->
+    <servlet>
+        <servlet-name>WelcomeTemplate</servlet-name>
+        <jsp-file>/welcome.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WelcomeTemplate</servlet-name>
+        <url-pattern>/welcome.jsp</url-pattern>
+    </servlet-mapping>
+    <!---->
+    <!---->
     <servlet>
         <servlet-name>InsertWorker</servlet-name>
         <jsp-file>/InsertWorker.jsp</jsp-file>
@@ -34,7 +73,16 @@
         <servlet-name>InsertWorker</servlet-name>
         <url-pattern>/InsertWorker.jsp</url-pattern>
     </servlet-mapping>
-
+    <!---->
+    <!---->
+    <servlet>
+        <servlet-name>DeleteWorker</servlet-name>
+        <servlet-class>controller.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteWorker</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
     <!--<servlet>-->
         <!--<servlet-name>WorkerServlet</servlet-name>-->
         <!--<servlet-class>controller.WorkerServlet</servlet-class>-->
@@ -43,7 +91,4 @@
         <!--<servlet-name>WorkerServlet</servlet-name>-->
         <!--<url-pattern>/login</url-pattern>-->
     <!--</servlet-mapping>-->
-
-
-
 </web-app>

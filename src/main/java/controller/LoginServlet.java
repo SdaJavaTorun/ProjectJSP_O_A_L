@@ -34,7 +34,13 @@ public class LoginServlet extends HttpServlet {
         System.out.println("user" + userName + "pass" + password);
 
         if(LoginDAO.validate(userName, password )){
-            resp.sendRedirect("/InsertWorker.jsp");
+            resp.sendRedirect("/welcome.jsp");
+            WorkersDAO workersDAO = new WorkersDAO();
+
+            workersDAO.removeAll();
+            workersDAO.insertWorker(new Worker("Jas", "dertop"));
+            workersDAO.insertWorker(new Worker("Jas2", "dertop2"));
+            workersDAO.insertWorker(new Worker("Jas3", "dertop3"));
         }
         else{
             out.print("Sorry albo user albo hasło do bani");

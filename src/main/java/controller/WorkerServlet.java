@@ -12,34 +12,31 @@ import java.io.IOException;
 public class WorkerServlet extends HttpServlet {
 
     @Override
-    protected void doGet (HttpServletRequest req, HttpServletResponse resp) throws ServletException,
-            IOException {
+    protected void doGet (HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
         resp.setContentType("text/html");
-        HttpSession session = req.getSession(true);
+        //HttpSession session = req.getSession(true);
 
-        WorkerDAO workerDAO = new WorkerDAO();
+        WorkersDAO workersDAO = new WorkersDAO();
 
-        workerDAO.removeAll();
-        workerDAO.insertWorker(new Worker("Jas", "dertop"));
-        workerDAO.insertWorker(new Worker("Jas2", "dertop2"));
-        workerDAO.insertWorker(new Worker("Jas3", "dertop3"));
+        workersDAO.removeAll();
+        workersDAO.insertWorker(new Worker("Jas", "dertop"));
+        workersDAO.insertWorker(new Worker("Jas2", "dertop2"));
+        workersDAO.insertWorker(new Worker("Jas3", "dertop3"));
 
-        req.setAttribute("workers", workerDAO.getWorkers());
+        req.setAttribute("workers", workersDAO.getWorkers());
 
         //req.setAttribute("board", session );
         req.getRequestDispatcher("/InsertWorker.jsp").forward(req, resp);
-}
+    }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException,
-            IOException {
-
-
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
 
         req.setAttribute("worker",
                 new Worker(req.getParameter("firstName"),
                            req.getParameter("lastName")));
         req.getRequestDispatcher("/InsertWorker.jsp").forward(req, resp);
-
     }
 }

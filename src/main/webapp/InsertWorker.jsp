@@ -1,53 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="model.Worker" %>
-<%@ page import="controller.WorkerDAO" %>
+<%@ page import="controller.WorkersDAO" %>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Dodaj Pracownika:</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <%--<style>
-        div.border {
-            font-size: 20px;
-            font-weight: bold;
-            color: gray;
-            background-color: lightgoldenrodyellow;
-            margin: 0px;
-            border     : 2px solid lightgray;
-            padding    : 6px;
-            width: 400px;
-            border-radius: 4px;
-            float : left;
-        }
-
-        div.formularz {
-
-            font-size: 20px;
-            font-weight: bold;
-            color: gray;
-            background-color: lightgoldenrodyellow;
-            margin: 0px;
-            border     : 2px solid lightgray;
-            padding    : 6px;
-            width: 200px;
-            border-radius: 4px;
-            float : left;
-        }
-        input[type=submit] {
-            width: 77%;
-            color: gray;
-            background-color: lightyellow;
-            padding: 14px 20px;
-            letter-spacing: 1px;
-            margin: 8px 0;
-            border     : 2px solid lightgray;
-            border-radius: 4px;
-            cursor: pointer;
-            align: center;
-            font-size: 40px;
-        }
-    </style>--%>
 </head>
 <body>
     <div>
@@ -68,9 +27,9 @@
     </div>
     <br style="clear:both">
     <br />
-    <div>
+    <%--<div>
         <div class=formularz>Imię pracownika: <c:out value="${worker.firstName}"/></div><br style="clear:both">
         <div class=formularz>Nazwisko pracownika: <c:out value="${worker.lastName}"/></div><br style="clear:both">
-    </div>
+    </div>--%>
 </body>
 </html>
