@@ -22,7 +22,7 @@
             <a href="/printallworkers"></a>
         </button>--%>
         <a href="/printallworkers" class="btn btn-info" role="button">Lista pracowników</a>
-        <button type="button" class="btn btn-primary active">Dodanie nowego pracownika</button>
+        <a href="/insert" class="btn btn-info" role="button">Dodanie nowego pracownika</a>
         <button type="button" class="btn btn-primary btn-warning active">Wyjście z programu</button>
 
     </div>

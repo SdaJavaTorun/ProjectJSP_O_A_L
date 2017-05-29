@@ -7,17 +7,18 @@ public class Worker {
     private double salary;
     private int Id;
 
+    public Worker (){}
+
     public Worker(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    public Worker(String lastName, String firstName, int age, double salary, int id) {
+    public Worker(String lastName, String firstName, int age, double salary) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.age = age;
         this.salary = salary;
-        Id = id;
     }
 
     public String getLastName() {

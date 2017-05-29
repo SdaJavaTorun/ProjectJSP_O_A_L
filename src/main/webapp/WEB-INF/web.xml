@@ -67,11 +67,20 @@
     <!---->
     <servlet>
         <servlet-name>InsertWorker</servlet-name>
-        <jsp-file>/InsertWorker.jsp</jsp-file>
+        <servlet-class>controller.InsertServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>InsertWorker</servlet-name>
-        <url-pattern>/InsertWorker.jsp</url-pattern>
+        <url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+    <!---->
+    <servlet>
+        <servlet-name>InsertTemplate</servlet-name>
+        <jsp-file>/insertworker.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InsertTemplate</servlet-name>
+        <url-pattern>/insertworker.jsp</url-pattern>
     </servlet-mapping>
     <!---->
     <!---->
